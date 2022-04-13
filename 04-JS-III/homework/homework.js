@@ -218,11 +218,16 @@ function breakStatement(numero) {
   //Pista: usá el statement 'break'
   // Tu código:
   var pausa = [];
+  var suma = numero;
   for (var i = 0; i < 10; i++) {
-    pausa.push(numero += 2);
-    if (numero == 10) {
-      return "Se interrumpió la ejecución";
+    suma = suma + 2;
+    if (suma === i) break;
+    else {
+      pausa.push(suma);
     }
+  }
+  if (i < 10) {
+    return "Se interrumpió la ejecución";
   }
   return pausa;
 }
